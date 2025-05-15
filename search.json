@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "README_TEMPLATE.html",
-    "href": "README_TEMPLATE.html",
-    "title": "My website",
-    "section": "",
-    "text": "My website\nThis repository contains the source code to deploy the website: &lt;{{ repository }} {{ owner }}&gt;"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "My Website Title",
