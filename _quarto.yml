@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "My Website Title"
+# uncomment the mext block if you want to add more pages
+#  navbar:
+#    left:
+#      - href: topic1.qmd
+#        text: Topic1
+  page-footer:
+    left: "© 2025 Your Name"
+    right:
+      - icon: github
+        href: https://github.com/yourname/yourrepo
+      - icon: twitter
+        href: https://twitter.com/yourhandle
+
+format:
+  html:
+    theme: cosmo
+    toc: true
