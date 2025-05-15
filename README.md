@@ -19,10 +19,6 @@ Before using this template, ensure the following:
 
 [^github_pat]: Make sure Git is configured and `GITHUB_PAT` is set up beforehand.
 
-Here’s a cleaner and more polished version of your instructions for creating and managing a Quarto-based website:
-
----
-
 ## 🌐 Create Your Own Website
 
 Follow these steps to set up and publish your Quarto-based website using GitHub Pages:
