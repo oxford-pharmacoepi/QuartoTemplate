@@ -14,6 +14,18 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
 
+      - name: Create gh-pages branch if it doesn't exist
+        run: |
+          if ! git ls-remote --exit-code origin gh-pages; then
+            git checkout --orphan gh-pages
+            git rm -rf .
+            echo "# GitHub Pages" > index.md
+            git add index.md
+            git commit -m "Initialize gh-pages branch"
+            git push origin gh-pages
+            git checkout main
+          fi
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
