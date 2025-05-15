@@ -1,5 +1,8 @@
 on:
-  workflow_dispatch:
+  workflow_run:
+    workflows: "Init repo"
+    types:
+      - completed
   push:
     branches: main
   pull_request:

@@ -1,0 +1,36 @@
+
+name: Init repo
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  init-gh-pages:
+    if: github.repository != 'oxford-pharmacoepi/QuartoTemplate'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+
+      - name: Create empty gh-pages branch if it doesn't exist
+        run: |
+          if ! git ls-remote --exit-code origin gh-pages; then
+            git checkout --orphan gh-pages
+            git commit --allow-empty -m "Initialize empty gh-pages branch"
+            git push origin gh-pages
+            git checkout main
+          fi
+
+      - name: Delete this workflow file
+        run: |
+          git rm .github/workflows/init.yml
+          git commit -m "Remove init.yml after gh-pages branch setup"
+          git push origin main
