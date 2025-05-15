@@ -1,6 +1,6 @@
 # QuartoTemplate
 
-This template is designed to create [`quarto`](https://quarto.org) projects that are deployed using [**GitHub Pages**](https://docs.github.com/en/pages).
+This template is designed to create [quarto](https://quarto.org) projects that are deployed using [GitHub Pages](https://docs.github.com/en/pages).
 
 ## Requirements and Setup
 
