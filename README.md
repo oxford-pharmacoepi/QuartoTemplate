@@ -25,7 +25,7 @@ After creating a repo from this template:
 2. Under "Build and deployment":
    - Choose "Deploy from a branch"
    - Select `gh-pages` as the source branch (leave `/` as the folder)
-3. Save — your site will be published at:
+3. Save — your site will be published at: `https://organisation.github.io/repository/`
 
 ### 2. Open Locally in RStudio
 
